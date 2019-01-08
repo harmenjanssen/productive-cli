@@ -1,6 +1,6 @@
 # Productive CLI
 
-Commandline interface for [https://productive.io](Productive).
+Commandline interface for [https://productive.io](https://productive.io).
 
 ## Installation
 
