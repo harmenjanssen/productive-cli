@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "chalk": "^2.4.2",
     "cli-table": "^0.3.1",
+    "dateformat": "^3.0.3",
     "dotenv": "^6.2.0",
     "subcommander": "^1.0.0"
   }
