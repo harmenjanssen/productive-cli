@@ -25,6 +25,11 @@ subcommander
     desc: 'List your time entries',
     callback: productive.time.list
   })
+  .option('verbose', {
+    abbr: 'v',
+    default: false,
+    flag: true
+  })
   .option('date', {
     abbr: 'd',
     default: dateFormat(new Date(), 'yyyy-mm-dd')
