@@ -1,7 +1,15 @@
 {
+  "name": "productive-cli",
+  "version": "1.0.0",
+  "author": "Harmen Janssen <harmen@whatstyle.net>",
+  "main": "index.js",
+  "bin": {
+    "productive": "./index.js"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "cli-table": "^0.3.1",
-    "dotenv": "^6.2.0"
+    "dotenv": "^6.2.0",
+    "subcommander": "^1.0.0"
   }
 }
