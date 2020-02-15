@@ -36,3 +36,14 @@ Or install and run the CLI locally:
 $ npm install
 $ ./index.js
 ```
+
+## Usage
+
+Read the help at: 
+
+```
+$ node index.js 
+```
+
+
+Will add documentation later.
