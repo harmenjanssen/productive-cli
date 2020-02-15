@@ -43,6 +43,23 @@ subcommander
   .option('id', {
     abbr: 'i',
     desc: 'Id of the time entry'
-  });
+  })
+  .end()
+  .command('resume', {
+    desc: 'Resume the last timer, or the given id.',
+    callback: reportingExceptions(productive.time.resume)
+  })
+  .option('id', {
+    abbr: 'i',
+    desc: 'Id of the time entry',
+    default: undefined
+  })
+  .end()
+  .command('stop', {
+    desc: 'Stop the current running timer.',
+    callback: reportingExceptions(productive.time.stop)
+  })
+  .end()
+;
 
 subcommander.parse();
