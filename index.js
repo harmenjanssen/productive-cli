@@ -6,9 +6,9 @@ const dateFormat = require('dateformat');
 const chalk = require('chalk');
 const productive = require('./lib/productive');
 
-const reportingExceptions = fn => (...args) => {
+const reportingExceptions = fn => async (...args) => {
   try {
-    return fn(...args);
+    return await fn(...args);
   } catch (err) {
     process.stdout.write(
       '\n' +
@@ -17,6 +17,8 @@ const reportingExceptions = fn => (...args) => {
     );
   }
 };
+
+// TODO actually validate environment variables.
 
 subcommander
   .command('time', {
@@ -58,6 +60,20 @@ subcommander
   .command('stop', {
     desc: 'Stop the current running timer.',
     callback: reportingExceptions(productive.time.stop)
+  })
+  .end()
+  .command('start', {
+    desc: 'Start a new timer.',
+    callback: reportingExceptions(productive.time.start)
+  })
+  .option('project', {
+    abbr: 'p',
+    desc: 'Projectname'
+  })
+  .option('service', {
+    abbr: 's',
+    desc: 'Service',
+    default: undefined
   })
   .end()
 ;
